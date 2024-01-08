@@ -1,0 +1,1109 @@
+## messageSource=classpath:/ncicore/messages/email-mbci-invoice_$lang.properties
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
+		'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+	<head>
+		<style type='text/css'>
+			span.preheader {
+				display: none !important;
+				visibility: hidden;
+				line-height: 0;
+				opacity: 0;
+				color: transparent;
+				height: 0;
+				width: 0;
+				mso-hide: all;
+			}
+		</style>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+		<style type='text/css'>
+			@media only screen and (max-width: 640px) {
+				body, table, td, div, p, a, li, blockquote {
+					-webkit-text-size-adjust: none !important;
+				}
+				td[id='pageContainer'] ul {
+					margin: 0 !important;
+					padding-left: 18px !important;
+					padding-right: 18px !important;
+					line-height: 125% !important;
+				}
+				td[id='pageContainer'] ol {
+					margin: 0 !important;
+					padding-left: 22px !important;
+					padding-right: 22px !important;
+					line-height: 125% !important;
+				}
+				table[id='page'] {
+					width: 100% !important;
+				}
+				img[class*='cdImage'] {
+					width: 100% !important;
+					height: auto !important;
+				}
+				img[class*='cdSocialImg'] {
+					width: 32px !important;
+					height: 32px !important;
+				}
+				td[class*='cdTextOnLeftRightContainer'] {
+					display: block !important;
+					max-width: 960px !important;
+					width: inherit !important;
+				}
+				td[class*='cdImageOnLeftRightContainer'] {
+					display: block !important;
+					max-width: 960px !important;
+					width: 100% !important;
+				}
+				td[class*='cdColumnsContainer'] {
+					display: block !important;
+					max-width: 960px !important;
+					width: 100% !important;
+				}
+				table[class*='cdColumnContainer'] {
+					max-width: 960px !important;
+					width: 100% !important;
+				}
+				table[class*='cdSidebarTable'] {
+					max-width: 960px !important;
+					width: 100% !important;
+				}
+				td[class*='cdSidebarContainer'] {
+					display: block !important;
+					max-width: 960px !important;
+					width: 100% !important;
+				}
+				td[class*='cdSidebarBodyContainer'] {
+					display: block !important;
+					max-width: 960px !important;
+					width: 100% !important;
+					border-left: 0 !important;
+					border-right: 0 !important;
+				}
+				td[class*='cdSidebar'] {
+					border-left: 0 !important;
+					border-right: 0 !important;
+				}
+				table[class*='cdTableContent'] {
+					max-width: 960px !important;
+					width: 100% !important;
+				}
+				td[class*='cdBlockContainer'] {
+					padding-top: 0px !important;
+					padding-bottom: 0px !important;
+				}
+				table[class*='cdSidebarBodyInner'] {
+					max-width: 960px !important;
+					width: 100% !important;
+				}
+				table[class*='cdSidebarInner'] {
+					max-width: 960px !important;
+					width: 100% !important;
+				}
+				.cdPreheaderContainer td[class*='cdTextContent'] div {
+					font-size: 14px !important;
+				}
+				.cdFooterContainer td[class*='cdTextContent'] div {
+					font-size: 14px !important;
+				}
+				.cdHeaderContainer td[class*='cdTextContent'] div {
+					font-size: 18px !important;
+				}
+				.cdBodyContainer td[class*='cdTextContent'] div {
+					font-size: 18px !important;
+				}
+				.cdColumnContainer td[class*='cdTextContent'] div {
+					font-size: 18px !important;
+				}
+				.cdSidebarContainer td[class*='cdTextContent'] div {
+					font-size: 18px !important;
+				}
+				.cdSidebarBodyContainer td[class*='cdTextContent'] div {
+					font-size: 18px !important;
+				}
+				td[class*='cdTextContent'] *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+					line-height: 125% !important;
+				}
+				h1 {
+					font-size: 32px !important;
+					line-height: 110% !important;
+				}
+				h2 {
+					font-size: 24px !important;
+					line-height: 110% !important;
+				}
+				h3 {
+					font-size: 20px !important;
+					line-height: 110% !important;
+				}
+				h4 {
+					font-size: 16px !important;
+					line-height: 110% !important;
+				}
+				h5 {
+					font-size: 16px !important;
+					line-height: 110% !important;
+				}
+				h6 {
+					font-size: 16px !important;
+					line-height: 110% !important;
+				}
+			}
+		</style>
+	</head>
+	<body style="margin:0px;background-color:rgb(224, 224, 224)">
+        #set ($orderInfoUrl = "${ctx.baseUrl}/my-account/order/${ctx.order.code}")
+		#set ($String = "abc")
+		#set ($totalAmountOrder = $String.format("$%,.2f", $ctx.invoice.totalAmountOrder))
+		#set ($amountDue = $String.format("$%,.2f", $ctx.invoice.amountDue))
+		#set ($deposit = $String.format("$%,.2f", $ctx.invoice.deposit))
+		#set ($nonTaxableAmount = $String.format("$%,.2f", $ctx.invoice.nonTaxableAmount))
+		#set ($taxableAmount = $String.format("$%,.2f", $ctx.invoice.taxableAmount))
+		#set ($subtotal = $String.format("$%,.2f", $ctx.invoice.subtotal))
+		#set ($totalTax = $String.format("$%,.2f", $ctx.invoice.totalTax))
+		<div class="content" style="height: 100%;">
+			<div style="background: #fff; margin: 0px; height: 100%;">
+				<table style="width: 100%; height: 100%; margin: 0 auto; border-collapse: collapse; border-spacing: 0; padding: 0px; border: 0px none transparent; vertical-align: top;"
+					   cellpadding="0" cellspacing="0">
+					<tbody>
+						<tr>
+							<td id="pageContainer"
+								style="padding-top: 0; padding-bottom: 0; width: 100%; text-align: left; background-color: rgb(224, 224, 224); border-top: 0px none rgb(255, 255, 255);">
+								<div class="previewContainer">
+									<div class="regularPreview">
+										<center>
+											<table id="page"
+												   style="direction: ltr; text-align: left; background-color: rgb(285, 285, 285); width: 960px; margin: auto; border-collapse: collapse; border-spacing: 0px; padding: 0px; vertical-align: top; border-width: 0px; border-color: rgb(265, 265, 265); border-style: none;"
+												   class="HeadingContainer" cellpadding="0" cellspacing="0">
+												<tbody>
+													<tr>
+														<td style="border: 0px none transparent; padding: 0px;">
+															<table style="margin: auto;border-collapse:collapse;width: 100%; border-spacing: 0;padding: 0px;"
+																   cellpadding="0"
+																   cellspacing="0">
+																<tbody>
+																	<tr>
+																		<td style="border: 0px none transparent; padding: 0px; vertical-align: top;width:100%;">
+																			<table style="width: 960px; border-collapse: collapse; border-spacing: 0px; padding: 0px; border: 0px none transparent; vertical-align: top; background-color: rgb(255, 255, 255);"
+																				   class="cdPreheaderContainer cdTableContent PreheaderLinksStyle PreheaderAnchorsStyle"
+																				   cellpadding="0" cellspacing="0">
+																				<tbody>
+																					<tr>
+																						<td class="Preheader"
+																							style="padding: 0px; vertical-align: top; width: 100%; line-height: 20px; color: rgb(80, 80, 80); font-family: Arial; font-size: 11px;">
+																							<table style="border-collapse:collapse; border-spacing: 0;padding: 0px; border: 0px none transparent; vertical-align: top;width:100%;"
+																								   cellpadding="0"
+																								   cellspacing="0">
+																								<tbody>
+																									<tr>
+																										<td style="width:100%; border: 0px none transparent; padding: 0px; vertical-align: top;">
+																											<table style="border-collapse:collapse; border-spacing: 0;padding: 0px; border: 0px none transparent; vertical-align: top;width:100%;"
+																												   cellpadding="0"
+																												   cellspacing="0">
+																												<tbody>
+																													<tr class="block10">
+																														<td class="cdBlockContainer"
+																															style="border: 0px none transparent; padding: 0px; vertical-align: top;width:100%;">
+																															<table style="border-collapse:collapse; border-spacing: 0;padding: 0px; border: 0px none transparent; vertical-align: top;width:100%;"
+																																   cellpadding="0"
+																																   cellspacing="0">
+																																<tbody>
+																																	<tr>
+																																		<td style="padding: 0px; border: 0px none transparent; vertical-align: top; width: 100%;">
+																																			<table style="width:100%;border-collapse:collapse; border-spacing: 0;padding: 0px; border: 0px none transparent; vertical-align: top;"
+																																				   cellpadding="0"
+																																				   cellspacing="0">
+																																				<tbody>
+																																					<tr>
+																																						<td style="border: 0px none transparent; vertical-align: top; width: 100%; padding: 0px;">
+																																							<table style="border-collapse: collapse; border-spacing: 0; padding: 9px 18px; border: 0px none transparent; vertical-align: top; width: 100%; background-color: rgb(224, 224, 224);"
+																																								   cellpadding="0"
+																																								   cellspacing="0">
+																																								<tbody>
+																																									<tr>
+																																										<td width="300"
+																																											align="left"
+																																											valign="middle"
+																																											bgcolor="#ececec">
+																																											<a href="${ctx.secureBaseUrl}"
+																																											   target="_blank">
+																																												<img src="${ctx.themeResourceUrl}/images/email/logo.png"
+																																													 style="float:left; margin: 10px 0 10px 50px;"
+																																													 alt=""
+																																													 width="168"
+																																													 height="51"
+																																													 border="0"
+																																													 align="right"
+																																													 title=""/>
+																																											</a>
+																																										</td>
+																																										<td width="300"
+																																											align="right"
+																																											valign="middle"
+																																											bgcolor="#ececec">
+																																											<a href="${ctx.secureBaseUrl}"
+																																											   style="background-color: #ececec;border: none;color: #678695;padding: 12px 20px;text-align: center;text-decoration: underline;display: inline-block;font-size: 13px;"
+																																											   target="_blank">
+                                                                                                                                                                                ${ctx.messages.accountLogin}
+																																											</a>
+																																										</td>
+																																									</tr>
+																																								</tbody>
+																																							</table>
+																																						</td>
+																																					</tr>
+																																				</tbody>
+																																			</table>
+																																		</td>
+																																	</tr>
+																																</tbody>
+																															</table>
+																														</td>
+																													</tr>
+																													<tr class="block14">
+																														<td class="cdBlockContainer"
+																															style="border: 0px none transparent; padding: 0px; vertical-align: top;width:100%;">
+																															<table style="border-collapse:collapse; border-spacing: 0;padding: 0px 0px 20px 0px; border: 0px none transparent; vertical-align: top;width:100%"
+																																   cellpadding="0"
+																																   cellspacing="0">
+																																<tbody>
+																																	<tr>
+																																		<td style="padding: 0px; border: 0px none transparent; vertical-align: top; width: 100%; font-size: 14px; line-height: 20px;">
+																																			<table style="width:100%;border-collapse:collapse; border-spacing: 0;padding: 0px; border: 0px none transparent; vertical-align: top;"
+																																				   cellpadding="0"
+																																				   cellspacing="0">
+																																				<tbody>
+																																					<tr>
+																																						<td style="border: 0px none transparent; vertical-align: top; width: 100%; padding: 0px;">
+																																							<table style="border-collapse: collapse; border-spacing: 0; /*padding: 9px 18px;*/ border: 0px none transparent; vertical-align: top; width: 100%;"
+																																								   cellpadding="0"
+																																								   cellspacing="0">
+																																								<tbody>
+																																									<tr>
+																																										<td align="center"
+																																											valign="middle">
+																																											${ctx.cmsSlotContents.TopContent}
+																																										</td>
+																																									</tr>
+																																									<tr>
+																																										<td class="cdTextContent"
+																																											style="border: 0px solid transparent; vertical-align: top; width: 100%; padding: 20px 50px 10px 50px; color: rgb(80, 80, 80); font-family: Arial; font-size: 14px; line-height: 20px;">
+																																											<table style="border-collapse: collapse; border-spacing: 0; border: 0px none transparent; vertical-align: top; width: 100%; margin-bottom: 15px;"
+																																												   cellpadding="0"
+																																												   cellspacing="0">
+																																												<tbody>
+																																													<tr>
+																																														<td colspan="5">
+																																															<h1 style="text-align: left; font-size:32px; line-height: 40px; color:#ed1c24; font-weight:100;">
+																																																Invoice - $ctx.invoice.number
+																																															</h1>
+																																														</td>
+																																													</tr>
+																																													<tr>
+																																														<td style="border: 0px none transparent; padding: 10px 0; text-align: center; width: 20%;">
+																																															<table style="border-collapse: collapse; border-spacing: 0; border: 0px solid transparent; vertical-align: top; width: 100%;"
+																																																   cellpadding="0"
+																																																   cellspacing="0">
+																																																<tbody>
+																																																	<tr>
+																																																		<td style="background-color: #3e3e3e; border-left: 8px solid #d8222d; padding: 10px 0; text-align: center; font-family: Arial; font-size: 14px; line-height: 20px;">
+																																																			#set ($quoteInfoUrl = "${ctx.invoicePublicURL}")
+																																																			<a href="${quoteInfoUrl}" style="color: white; text-align: center; text-decoration: none; font-size: 14px;" target="_blank">
+																																																				View Invoice
+																																																			</a>
+																																																		</td>
+																																																	</tr>
+																																																</tbody>
+																																															</table>
+																																														</td>
+																																														<td style="width: 80%;">
+																																															&nbsp;
+																																														</td>
+																																													</tr>
+																																												</tbody>
+																																											</table>
+																																										</td>
+																																									</tr>
+																																								</tbody>
+																																							</table>
+																																						</td>
+																																					</tr>
+																																					<tr>
+																																						<td style="border: 0px none transparent; vertical-align: top; width: 100%; padding: 0px;">
+																																							<table style="border-collapse: collapse; border-spacing: 0; /*padding: 9px 18px;*/ border: 0px none transparent; vertical-align: top; width: 100%;"
+																																								   cellpadding="0"
+																																								   cellspacing="0">
+																																								<tbody>
+																																									<tr>
+																																										<td class="cdTextContent"
+																																											style="border: 0px solid transparent; vertical-align: top; width: 100%; padding: 20px 50px 10px 50px; color: rgb(80, 80, 80); font-family: Arial; font-size: 14px; line-height: 20px;">
+                                                                                                                                                                        #*---------------------------------------------
+                                                                                                                                                                        ---------------INVOICE SUMMARY---------------------
+                                                                                                                                                                        ---------------------------------------------*#
+																																											<table class="products"
+																																												   width="100%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0"
+																																												   style="border-collapse: collapse; border-spacing: 0; border: 0px solid transparent;">
+																																												<tr>
+																																													<td width="100%" height="40" colspan="6" style="background-color: transparent; border: 0px none transparent; color: white; text-align: left; text-decoration: none; font-size: 17px; font-weight: normal; width: 100%;">
+																																														<table style="border-collapse: collapse; border-spacing: 0; border: 0px none transparent; vertical-align: top; width: 100%; "
+																																															   cellpadding="0"
+																																															   cellspacing="0"
+																																															   align="center">
+																																															<tbody>
+																																																<tr>
+																																																	<td colspan="6" style="background-color: #3e3e3e; border-left: 8px solid #d8222d; padding: 20px;font-family: Arial; font-size: 17px; font-weight: 400; line-height: 20px; color: white; text-align: left; text-decoration: none; ">Invoice Summary</td>
+																																																</tr>
+																																															</tbody>
+																																														</table>
+																																													</td>
+																																												</tr>
+																																												<tr style="background-color: #c9c9c9;">
+																																													<td style="text-align: left; padding: 10px; border: 1px solid #b3b3b3" width="25%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Invoice #</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Invoice Date</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Bill of Landing #</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Selling Plant</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Mail Remittance to</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Status</font>
+																																													</td>
+																																												</tr>
+																																												<tr style="background-color: #ffffff;">
+																																													<td style="text-align: left; padding: 20px 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.number</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoiceDate</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.billOfLanding</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="20%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400; text-transform: uppercase;">
+																																															$!ctx.invoice.soldToCustomer.sellingPlant.name<br>
+																																															$!ctx.invoice.soldToCustomer.sellingPlant.addressLine1<br>
+																																															#if($ctx.invoice.soldToCustomer.sellingPlant.city) $!ctx.invoice.soldToCustomer.sellingPlant.city, #end
+																																															$!ctx.invoice.soldToCustomer.sellingPlant.state
+																																															$!ctx.invoice.soldToCustomer.sellingPlant.postalCode<br>
+																																															#if($ctx.invoice.soldToCustomer.sellingPlant.phoneNumber)Phone: $ctx.invoice.soldToCustomer.sellingPlant.phoneNumber #end<br>
+																																															#if($ctx.invoice.soldToCustomer.sellingPlant.fax)Fax: $ctx.invoice.soldToCustomer.sellingPlant.fax #end<br>
+																																														</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="20%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.remittanceTo.name</font>
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.remittanceTo.addressLine1</font>
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.remittanceTo.city</font>
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.remittanceTo.state</font>
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.remittanceTo.country</font>
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.remittanceTo.postalCode</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.status</font>
+																																													</td>
+																																												</tr>
+																																											</table>
+																																											<br/>
+                                                                                                                                                                        #*---------------------------------------------
+                                                                                                                                                                        ---------------INFO GRIDS----------------------
+                                                                                                                                                                        ---------------------------------------------*#
+																																											<table width="82%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0"
+																																												   bordercolor="#b3b3b3"
+																																												   class="products"
+																																												   style="border-bottom: 1px solid #b3b3b3; padding-bottom: 25px;">
+																																												<h5 class="headline" style="font-size: 24px; color: #333333; font-weight: 400; margin: 25px 0;">Sold to Customer</h5>
+																																												<table id="order-totals">
+																																													<tbody>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Name:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.soldToCustomer.name</td>
+																																														</tr>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Customer ID:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.soldToCustomer.uid</td>
+																																														</tr>
+																																													</tbody>
+																																												</table>
+																																											</table>
+																																											<br>
+																																											<table width="82%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0"
+																																												   bordercolor="#b3b3b3"
+																																												   class="products"
+																																												   style="border-bottom: 1px solid #b3b3b3; padding-bottom: 25px;">
+																																												<h5 class="headline" style="font-size: 24px; color: #333333; font-weight: 400; margin: 25px 0;">Bill to Customer</h5>
+																																												<table id="order-totals">
+																																													<tbody>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Name:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.billToCustomer.name</td>
+																																														</tr>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Address:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.billToAddress.line1</td>
+																																														</tr>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Phone:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.billToAddress.phone</td>
+																																														</tr>
+																																													</tbody>
+																																												</table>
+																																											</table>
+																																											<br>
+																																											<table width="82%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0"
+																																												   bordercolor="#b3b3b3"
+																																												   class="products"
+																																												   style="border-bottom: 1px solid #b3b3b3; padding-bottom: 25px;">
+																																												<h5 class="headline" style="font-size: 24px; color: #333333; font-weight: 400; margin: 25px 0;">Shipping Information</h5>
+																																												<table id="order-totals">
+																																													<tbody>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Name:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.shipToCustomer.name</td>
+																																														</tr>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Address:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.shipToAddress.line1</td>
+																																														</tr>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Country:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.shipToAddress.country.name</td>
+																																														</tr>
+																																													</tbody>
+																																												</table>
+																																											</table>
+																																											<br>
+																																											<table width="82%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0"
+																																												   bordercolor="#b3b3b3"
+																																												   class="products"
+																																												   style="border-bottom: 1px solid #b3b3b3; padding-bottom: 25px;">
+																																												<h5 class="headline" style="font-size: 24px; color: #333333; font-weight: 400; margin: 25px 0;">Jobsite or Store Contact</h5>
+																																												<table id="order-totals">
+																																													<tbody>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Name:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.order.jobSiteContact</td>
+																																														</tr>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Phone:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.order.phoneNumber</td>
+																																														</tr>
+																																													</tbody>
+																																												</table>
+																																											</table>
+																																											<br>
+																																											 <tr style="border: 1px solid black;">
+										<td class="bgd" colspan="10" style="padding-left:1px; background-color: #494949; color: #ffffff; font-size: 20px; font-weight: 700;">Contact Information</td>
+									</tr>
+									<hr><hr>
+                            <tr style="border: 1px solid black;">
+										<td class="bgd" colspan="10" style="padding-left:1px; background-color: #494949; color: #ffffff; font-size: 12px; font-weight: 700;">Sales Order Contact Information</td>
+									</tr>
+
+<body>
+<table cellpadding="10px"cellspacing="20px" width="100%" class="custom">
+  <tr align ="left" style="border: 1px solid black;border: 1px solid black; background-color: #c0c0c0;">
+    <th>Name</th>
+    <th>Phone</th> 
+    <th>Email</th>
+  </tr>
+  <tr align ="left" style="border: 1px solid black; " >
+    <td>  <c:forTokens var="token" items="${quote.salesOrderContact}" delims=";">
+                                   <c:out value="${token}"/><br>
+                                      </c:forTokens>
+									</td>
+    <td>
+                         <c:forTokens var="token" items="${quote.salesOrderPhone}" delims=";">
+                        <c:out value="${token}"/><br>
+                 </c:forTokens>
+                   </td>
+    <td>   <c:forTokens var="token" items="${quote.salesOrderEmail}" delims=";">
+                                   <c:out value="${token}"/><br>
+                                      </c:forTokens>
+									</td>
+  </tr>
+  
+                       <tr style="border: 1px solid black;">
+							<td class="bgd" colspan="10" style="padding-left:1px; background-color: #494949; color: #ffffff; font-size: 12px; font-weight: 700;">Ship To Contact Information</td>
+				</tr>
+                                 
+  
+
+
+  <tr  align ="left" style="border: 1px solid black;border: 1px solid black; background-color: #c0c0c0;">
+    <th>Name</th>
+    <th>Phone</th> 
+    <th>Email</th>
+  </tr>
+  <tr align ="left" style="border: 1px solid black; " >
+    <td>   <c:forTokens var="token" items="${quote.jobSiteContact}" delims=";">
+                                   <c:out value="${token}"/><br>
+                                      </c:forTokens>
+									</td>
+    <td>   <c:forTokens var="token" items="${quote.phoneNumber}" delims=";">
+                                   <c:out value="${token}"/><br>
+                                      </c:forTokens>
+									</td>
+    <td>   <c:forTokens var="token" items="${quote.shipToEmail}" delims=";">
+                                   <c:out value="${token}"/><br>
+                                      </c:forTokens>
+									</td>
+  </tr>
+  
+  </table>
+																																											
+                                                                                                                                                                        #*---------------------------------------------
+                                                                                                                                                                        ---------------ORDER SUMMARY-------------------
+                                                                                                                                                                        ---------------------------------------------*#
+																																											<table class="products"
+																																												   width="100%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0"
+																																												   style="border-collapse: collapse; border-spacing: 0; border: 0px solid transparent;">
+																																												<tr>
+																																													<td width="100%" height="40" colspan="6" style="background-color: transparent; border: 0px none transparent; color: white; text-align: left; text-decoration: none; font-size: 17px; font-weight: normal; width: 100%;">
+																																														<table style="border-collapse: collapse; border-spacing: 0; border: 0px none transparent; vertical-align: top; width: 100%; "
+																																															   cellpadding="0"
+																																															   cellspacing="0"
+																																															   align="center">
+																																															<tbody>
+																																																<tr>
+																																																	<td colspan="6" style="background-color: #3e3e3e; border-left: 8px solid #d8222d; padding: 20px;font-family: Arial; font-size: 17px; font-weight: 400; line-height: 20px; color: white; text-align: left; text-decoration: none; ">
+																																																		Order Summary
+																																																	</td>
+																																																</tr>
+																																															</tbody>
+																																														</table>
+																																													</td>
+																																												</tr>
+																																												<tr style="background-color: #c9c9c9;">
+																																													<td style="text-align: left; padding: 10px; border: 1px solid #b3b3b3" width="25%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Order #</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Date of Order</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Date Shipped</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Customer P.O. #/Ordered By:</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Sales Coordinator</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Terms</font>
+																																													</td>
+																																												</tr>
+																																												<tr style="background-color: #ffffff;">
+																																													<td style="text-align: left; padding: 20px 10px; border: 1px solid #b3b3b3" width="25%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.order.code</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.orderDate</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.shippedDate</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.poNumber</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.salesCoordinator</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="15%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!ctx.invoice.terms</font>
+																																													</td>
+																																												</tr>
+																																											</table>
+																																											<br/>
+                                                                                                                                                                        #*---------------------------------------------
+                                                                                                                                                                        ---------------INVOICE ITEMS-------------------
+                                                                                                                                                                        ---------------------------------------------*#
+																																											<table class="products"
+																																												   width="100%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0"
+																																												   style="border-collapse: collapse; border-spacing: 0; border: 0px solid transparent;">
+																																												<tr>
+																																													<td width="100%" height="40" colspan="11" style="background-color: transparent; border: 0px none transparent; color: white; text-align: left; text-decoration: none; font-size: 17px; font-weight: normal; width: 100%;">
+																																														<table style="border-collapse: collapse; border-spacing: 0; border: 0px none transparent; vertical-align: top; width: 100%; "
+																																															   cellpadding="0"
+																																															   cellspacing="0"
+																																															   align="center">
+																																															<tbody>
+																																																<tr>
+																																																	<td colspan="6" style="background-color: #3e3e3e; border-left: 8px solid #d8222d; padding: 20px;font-family: Arial; font-size: 17px; font-weight: 400; line-height: 20px; color: white; text-align: left; text-decoration: none; ">
+																																																		Invoice Items
+																																																	</td>
+																																																</tr>
+																																															</tbody>
+																																														</table>
+																																													</td>
+																																												</tr>
+																																												<tr style="background-color: #c9c9c9;">
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="9%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Line Number</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="9%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Description</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="9%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Ga</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="9%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Color</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="9%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Qty</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="9%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Sheet Length</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="9%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Sq.Ft. rer Sheet</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="9%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Total Sq.Ft.</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="9%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Unit Price</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="9%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Option Charge</font>
+																																													</td>
+																																													<td style="text-align: center; padding: 10px; border: 1px solid #b3b3b3" width="10%">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 600">Total</font>
+																																													</td>
+																																												</tr>
+																																												#foreach( $entry in ${ctx.invoice.invoiceEntries} )
+																																													<tr style="background-color: #ffffff;">
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="9%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!entry.lineNumber</font>
+																																														</td>
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="9%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400; color: #333333!important; text-decoration: none!important;">$!entry.description</font>
+																																														</td>
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="9%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!entry.gauge</font>
+																																														</td>
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="9%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!entry.color</font>
+																																														</td>
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="9%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$String.format("%,.0f", $entry.invoiceQuantity)</font>
+																																														</td>
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="9%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">
+																																																#if($entry.lengthFeet) $String.format("%,.0f", $entry.lengthFeet)&#39; #else #end
+																																																#if($entry.lengthInches && $entry.lengthInches != '0E-8') - $String.format("%,.0f", $entry.lengthInches)&#34; #else #end
+																																															</font>
+																																														</td>
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="9%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">#if($entry.sqftPerSheet) $String.format("%,.2f", $entry.sqftPerSheet) #else #end</font>
+																																														</td>
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="9%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">#if($entry.totalSqft == "0E-8") 0 #else $String.format("%,.2f", $entry.totalSqft) #end</font>
+																																														</td>
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="9%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">#if($entry.unitPrice) $String.format("$%,.2f", $entry.unitPrice) #else #end</font>
+																																														</td>
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="9%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">$!entry.optionPrice</font>
+																																														</td>
+																																														<td style="text-align: center; padding: 20px 10px; border: 1px solid #b3b3b3" width="10%">
+																																															<font color="#333333" size="2" face="Arial, Helvetica, sans-serif" style="font-weight: 400">#if($entry.amount) $String.format("$%,.2f", $entry.amount) #else #end</font>
+																																														</td>
+																																													</tr>
+																																												#end
+																																											</table>
+																																											<br/>
+                                                                                                                                                                        #*---------------------------------------------
+                                                                                                                                                                        ---------------PRICING SUMMARY-----------------
+                                                                                                                                                                        ---------------------------------------------*#
+																																											<table width="100%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0"
+																																												   bordercolor="#b3b3b3"
+																																												   class="products">
+																																												<tr>
+																																													<td valign="top">
+																																														<table width="100%" style="border-spacing: 0">
+																																															<tr>
+																																																<td width="100%" height="40" colspan="4" style="color: #333333; text-align: left; text-decoration: none; font-size: 24px; font-weight: 400; border-bottom: 2px solid #ed1c24">${ctx.messages.pricingSummaryArticle}</td>
+																																															</tr>
+																																															<tr style="text-align: right;">
+																																																<td width="75%" valign="top" style="text-align: left; padding-top: 15px;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">Packaging:</font>
+																																																	</p>
+																																																</td>
+																																																<td width="25%" valign="top" style="border-left: 1px solid #c9c9c9; padding-top: 15px;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">$0.00</font>
+																																																	</p>
+																																																</td>
+																																															</tr>
+																																															<tr style="text-align: right;">
+																																																<td valign="top" style="text-align: left;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">Freight:</font>
+																																																	</p>
+																																																</td>
+																																																<td valign="top" style="text-align: right; border-left: 1px solid #c9c9c9;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">$0.00</font>
+																																																	</p>
+																																																</td>
+																																															</tr>
+																																															<tr style="text-align: right;">
+																																																<td valign="top" style="text-align: left;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">Non Taxable Items:</font>
+																																																	</p>
+																																																</td>
+																																																<td valign="top" style="text-align: right; border-left: 1px solid #c9c9c9;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">#if(!$ctx.invoice.nonTaxableAmount || $ctx.invoice.nonTaxableAmount == "0E-8") $0.00 #else $nonTaxableAmount #end</font>
+																																																	</p>
+																																																</td>
+																																															</tr>
+																																															<tr style="text-align: right;">
+																																																<td valign="top" style="text-align: left;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">Taxable Items:</font>
+																																																	</p>
+																																																</td>
+																																																<td valign="top" style="text-align: right; border-left: 1px solid #c9c9c9;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">#if($ctx.invoice.taxableAmount) $taxableAmount #else #end</font>
+																																																	</p>
+																																																</td>
+																																															</tr>
+																																															<tr style="text-align: right;">
+																																																<td valign="top" style="text-align: left;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">Subtotal of All Items:</font>
+																																																	</p>
+																																																</td>
+																																																<td valign="top" style="text-align: right; border-left: 1px solid #c9c9c9;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">#if($ctx.invoice.subtotal) $subtotal #else #end</font>
+																																																	</p>
+																																																</td>
+																																															</tr>
+																																															<tr style="text-align: right;">
+																																																<td valign="top" style="text-align: left; border-bottom: 1px solid #c9c9c9; padding-bottom: 15px;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">Tax:</font>
+																																																	</p>
+																																																</td>
+																																																<td valign="top" style="text-align: right; border-left: 1px solid #c9c9c9; border-bottom: 1px solid #c9c9c9; padding-bottom: 15px;">
+																																																	<p style="margin: 0">
+																																																		<font color="#666666" size="2" face="Arial, Helvetica, sans-serif">#if($ctx.invoice.totalTax) $totalTax #else #end</font>
+																																																	</p>
+																																																</td>
+																																															</tr>
+																																														</table>
+																																													</td>
+																																												</tr>
+																																											</table>
+																																											<table width="100%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0"
+																																												   style="padding-top: 20px;">
+																																												<tr>
+																																													<td valign="top" style="width: 73%"></td>
+																																													<td valign="top" style="width: 18%; text-align: left;">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif">Total Amount of Order:</font>
+																																													</td>
+																																													<td valign="top" style="width: 9%; text-align: right;">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif"><b>#if($ctx.invoice.totalAmountOrder) $totalAmountOrder #else #end</b></font>
+																																													</td>
+																																												</tr>
+																																												<tr>
+																																													<td valign="top" style="width: 73%"></td>
+																																													<td valign="top" style="width: 18%; text-align: left;">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif">Deposit:</font>
+																																													</td>
+																																													<td valign="top" style="width: 9%; text-align: right;">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif"><b>#if($ctx.invoice.deposit) $deposit #else $0.00 #end</b></font>
+																																													</td>
+																																												</tr>
+																																												<tr>
+																																													<td valign="top" style="width: 73%"></td>
+																																													<td valign="top" style="width: 18%; text-align: left;">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif">Total Amount Due:</font>
+																																													</td>
+																																													<td valign="top" style="width: 9%; text-align: right;">
+																																														<font color="#333333" size="2" face="Arial, Helvetica, sans-serif"><b>#if($ctx.invoice.amountDue) $amountDue #else #end</b></font>
+																																													</td>
+																																												</tr>
+																																											</table>
+                                                                                                                                                                        #*---------------------------------------------
+                                                                                                                                                                        ---------------FREIGHT SUMMARY-----------------
+                                                                                                                                                                        ---------------------------------------------*#
+																																											<table width="82%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0"
+																																												   bordercolor="#b3b3b3"
+																																												   class="products"
+																																												   style="border-bottom: 1px solid #b3b3b3; padding-bottom: 25px;">
+																																												<h5 class="headline" style="font-size: 24px; color: #333333; font-weight: 400; margin: 25px 0;">Freight Summary</h5>
+																																												<table id="order-totals">
+																																													<tbody>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Customer Job Name/#:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.soldToCustomer.name</td>
+																																														</tr>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Estimated Shipping Weight:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.estimatedShipWeight</td>
+																																														</tr>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Ship Via:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.shipVia</td>
+																																														</tr>
+																																														<tr>
+																																															<td class="freight-items" style="font-size: 14px; color: #333333; font-weight: 400;">Mini Region:</td>
+																																															<td width="5%"></td>
+																																															<td style="font-size: 14px; color: #333333; font-weight: 400;">$!ctx.invoice.miniRegion</td>
+																																														</tr>
+																																													</tbody>
+																																												</table>
+																																											</table>
+                                                                                                                                                                        #*---------------------------------------------
+                                                                                                                                                                        ---------------FOOTER SECTION------------------
+                                                                                                                                                                        ---------------------------------------------*#
+																																											<table width="82%"
+																																												   border="0"
+																																												   align="center"
+																																												   cellpadding="0"
+																																												   cellspacing="0">
+																																												<tbody>
+																																													<tr class="block14">
+																																														<td style="border: 0px none transparent; vertical-align: top; width: 100%; padding: 0 45px 0 45px; background-color: #fff;">
+																																															<table style="background:#ececec; vertical-align: top; width:100%;"
+																																																   cellpadding="0"
+																																																   cellspacing="0">
+																																																<tbody>
+																																																	<tr>
+																																																		<td style="border: 0px none transparent; vertical-align: top; width: 100%; padding: 0px; background-color: #fff;">
+																																																			<table style="border-collapse: collapse; border-spacing: 0; /*padding: 9px 18px;*/ border: 0px none transparent; vertical-align: top; width: 100%;"
+																																																				   cellpadding="0"
+																																																				   cellspacing="0">
+																																																				<tbody>
+																																																					<tr>
+																																																						<td class="cdTextContent"
+																																																							style="border: 0px solid transparent; vertical-align: top; width: 100%; padding: 20px 20px 20px 20px; color: rgb(80, 80, 80); font-family: Arial; font-size: 14px; line-height: 20px;">
+																																																							<div class="individualblock14">
+																																																								<p>
+																																																									<span style="font-family: arial; font-size: 22px; font-weight: regular; color:#d8222d;">${ctx.messages.questions}</span>
+																																																									<span style="font-family: arial; font-size: 22px; font-weight: bold; color:#3e3e3e;">${ctx.messages.contactUs}</span>
+																																																								</p>
+																																																								<p>${ctx.messages.weAimTo}</p>
+																																																								<p>${ctx.messages.signature}</p>
+																																																								<table style="vertical-align: middle"
+																																																									   cellpadding="0"
+																																																									   cellspacing="0">
+																																																									<tbody>
+																																																										<tr>
+																																																											<td width="20" height="25" style="vertical-align: top;"><img src="${ctx.themeResourceUrl}/images/email/phone.png"/></td>
+																																																											<td height="25" style="vertical-align: middle;"><font style="line-height: 16px;" color="#666666" size="2" face="Arial, Helvetica, sans-serif">${ctx.messages.phoneNumber}</font></td>
+																																																											<td width="5"></td>
+																																																											<td>|</td>
+																																																											<td width="5"></td>
+																																																											<td width="25" height="25" style="vertical-align: top;"><img src="${ctx.themeResourceUrl}/images/email/mail.png"/></td>
+																																																											<td height="25" style="vertical-align: middle;"><font style="line-height: 16px;" color="#666666" size="2" face="Arial, Helvetica, sans-serif">${ctx.messages.emailAddress}</font></td>
+																																																										</tr>
+																																																									</tbody>
+																																																								</table>
+																																																								<p></p>
+																																																							</div>
+																																																						</td>
+																																																					</tr>
+																																																				</tbody>
+																																																			</table>
+																																																		</td>
+																																																	</tr>
+																																																</tbody>
+																																															</table>
+																																														</td>
+																																													</tr>
+																																													<tr>
+																																														<td style="padding: 0px; vertical-align: top;width:100%;">
+																																															<table style="width: 100%; border-collapse: collapse; border-spacing: 0px; padding: 0px; vertical-align: top; background-color: rgb(255, 255, 255);"
+																																																   class="cdFooterContainer cdTableContent FooterLinksStyle FooterAnchorsStyle"
+																																																   cellpadding="0"
+																																																   cellspacing="0">
+																																																<tbody>
+																																																	<tr>
+																																																		<td class="Footer"
+																																																			style="padding: 0px; vertical-align: top; width: 100%; line-height: 20px; color: rgb(80, 80, 80); font-family: Arial; font-size: 11px;">
+																																																			<table style="border-collapse:collapse; border-spacing: 0;padding: 0px; border: 0px none transparent; vertical-align: top;width:100%;"
+																																																				   cellpadding="0"
+																																																				   cellspacing="0">
+																																																				<tbody>
+																																																					<tr>
+																																																						<td style="width:100%;border: 0px none transparent; padding: 0px; vertical-align: top;">
+																																																							<table style="border-collapse:collapse; border-spacing: 0;padding: 0px; border: 0px none transparent; vertical-align: top;width:100%;"
+																																																								   cellpadding="0"
+																																																								   cellspacing="0">
+																																																								<tbody>
+																																																									<tr class="block40">
+																																																										<td class="cdBlockContainer"
+																																																											style="border: 0px none transparent; padding: 9px 18px; vertical-align: top; background-color: #3e3e3e;width:100%; border-left: 10px solid #d8222d; text-align: center;">
+																																																											<a style="font-style: normal;font-weight: bold;color: #007FB7;text-decoration: none; vertical-align: middle;"
+																																																											   href="${ctx.secureBaseUrl}"
+																																																											   target="_blank">
+																																																												<span style="color:#fff; font-family: Arial; font-weight: bold; font-size: 16px; line-height: 20px; vertical-align: middle;">
+																																																													${ctx.messages.webAddress}
+																																																												</span>
+																																																											</a>
+																																																										</td>
+																																																									</tr>
+																																																									<tr class="block40">
+																																																										<td class="cdBlockContainer"
+																																																											style="border: 0px none transparent; padding: 0px; vertical-align: background-color: #ececec top;width:100%;">
+																																																											<table style="border-collapse:collapse; border-spacing: 0;padding: 0px; border: 0px none transparent; vertical-align: top;width:100%;"
+																																																												   cellpadding="0"
+																																																												   cellspacing="0">
+																																																												<tbody>
+																																																													<tr>
+																																																														<td style="padding: 0px; border: 0px none transparent; vertical-align: top; width: 100%;">
+																																																															<table style="width:100%;border-collapse:collapse; border-spacing: 0;padding: 0px; border: 0px none transparent; vertical-align: top;"
+																																																																   cellpadding="0"
+																																																																   cellspacing="0">
+																																																																<tbody>
+																																																																	<tr>
+																																																																		<td style="border: 0px none transparent; vertical-align: top; width: 100%; padding: 10px 18px 5px 18px;">
+																																																																			<table width="100%">
+																																																																				<tr>
+																																																																					<td align="center"
+																																																																						style="font-size: 13px; font-weight: bold;">
+																																																																						<a href="${ctx.secureBaseUrl}"
+																																																																						   target="_blank"
+																																																																						   style="color: rgb(80, 80, 80); text-decoration: none; font-weight: normal;">
+                                                                                                                                                                                                                                                                                            ${ctx.messages.footerLinkCaption}
+																																																																						</a>
+                                                                                                                                                                                                                                                                                        ${ctx.messages.footerText}
+																																																																					</td>
+																																																																				</tr>
+																																																																			</table>
+																																																																		</td>
+																																																																	</tr>
+																																																																</tbody>
+																																																															</table>
+																																																														</td>
+																																																													</tr>
+																																																												</tbody>
+																																																											</table>
+																																																										</td>
+																																																									</tr>
+																																																								</tbody>
+																																																							</table>
+																																																						</td>
+																																																					</tr>
+																																																				</tbody>
+																																																			</table>
+																																																		</td>
+																																																	</tr>
+																																																</tbody>
+																																															</table>
+																																														</td>
+																																													</tr>
+																																												</tbody>
+																																											</table>
+																																										</td>
+																																									</tr>
+																																								</tbody>
+																																							</table>
+																																						</td>
+																																					</tr>
+																																				</tbody>
+																																			</table>
+																																		</td>
+																																	</tr>
+																																</tbody>
+																															</table>
+																														</td>
+																													</tr>
+																												</tbody>
+																											</table>
+																										</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</center>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
